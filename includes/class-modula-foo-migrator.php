@@ -386,7 +386,7 @@ class Modula_Foo_Migrator {
 	}
 
 	/**
-	 * Add Envira source to Modula gallery sources
+	 * Add FooGallery source to Modula gallery sources
 	 *
 	 * @param $sources
 	 *
@@ -463,6 +463,3 @@ class Modula_Foo_Migrator {
 	}
 
 }
-
-// Load the class.
-$modula_foo_migrator = Modula_Foo_Migrator::get_instance();

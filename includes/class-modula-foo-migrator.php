@@ -59,7 +59,7 @@ class Modula_Foo_Migrator {
 	/**
 	 * Returns the singleton instance of the class.
 	 *
-	 * @since 2.2.7
+	 * @since 1.0.0
 	 */
 	public static function get_instance() {
 
@@ -77,7 +77,7 @@ class Modula_Foo_Migrator {
 	 *
 	 * @return mixed
 	 *
-	 * @since 2.2.7
+	 * @since 1.0.0
 	 */
 	public function get_galleries() {
 
@@ -119,7 +119,7 @@ class Modula_Foo_Migrator {
 	 *
 	 * @return int
 	 *
-	 * @since 2.2.7
+	 * @since 1.0.0
 	 */
 	public function images_count( $id ) {
 
@@ -134,7 +134,7 @@ class Modula_Foo_Migrator {
 	 *
 	 * @param string $gallery_id
 	 *
-	 * @since 2.2.7
+	 * @since 1.0.0
 	 */
 	public function foogallery_gallery_import( $gallery_id = '' ) {
 
@@ -327,7 +327,7 @@ class Modula_Foo_Migrator {
 	 * Update imported galleries
 	 *
 	 *
-	 * @since 2.2.7
+	 * @since 1.0.0
 	 */
 	public function update_imported() {
 
@@ -374,7 +374,7 @@ class Modula_Foo_Migrator {
 	 * @param $message
 	 * @param $gallery_id
 	 *
-	 * @since 2.2.7
+	 * @since 1.0.0
 	 */
 	public function modula_import_result( $success, $message, $gallery_id = false ) {
 		echo json_encode( array(
@@ -383,6 +383,21 @@ class Modula_Foo_Migrator {
 			'modula_gallery_id' => $gallery_id
 		) );
 		die;
+	}
+
+	/**
+	 * Delete old entries from database
+	 *
+	 * @param $gallery_id
+	 *
+	 * @since 1.0.0
+	 */
+	public function clean_entries( $gallery_id ) {
+		global $wpdb;
+		$sql      = $wpdb->prepare( "DELETE FROM  $wpdb->posts WHERE ID = $gallery_id" );
+		$sql_meta = $wpdb->prepare( "DELETE FROM  $wpdb->postmeta WHERE post_id = $gallery_id" );
+		$wpdb->query( $sql );
+		$wpdb->query( $sql_meta );
 	}
 
 	/**
@@ -455,6 +470,8 @@ class Modula_Foo_Migrator {
 	 * @param $data
 	 *
 	 * @return mixed
+	 *
+	 * @since 1.0.0
 	 */
 	public function migrator_images( $images, $data ) {
 

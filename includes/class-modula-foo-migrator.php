@@ -152,7 +152,7 @@ class Modula_Foo_Migrator {
 			check_ajax_referer( 'modula-importer', 'nonce' );
 
 			if ( ! isset( $_POST['id'] ) ) {
-				$this->modula_import_result( false, esc_html__( 'No gallery was selected', 'modula-best-grid-gallery' ), false );
+				$this->modula_import_result( false, esc_html__( 'No gallery was selected', 'migrate-away-from-foogallery' ), false );
 			}
 
 			$gallery_id = absint( $_POST['id'] );
@@ -171,7 +171,7 @@ class Modula_Foo_Migrator {
 				if ( isset( $_POST['clean'] ) && 'delete' == $_POST['clean'] ) {
 					$this->clean_entries( $gallery_id );
 				}
-				$this->modula_import_result( false, esc_html__( 'Gallery already migrated!', 'modula-best-grid-gallery' ), false );
+				$this->modula_import_result( false, esc_html__( 'Gallery already migrated!', 'migrate-away-from-foogallery' ), false );
 			}
 		}
 
@@ -221,7 +221,7 @@ class Modula_Foo_Migrator {
 			if ( isset( $_POST['clean'] ) && 'delete' == $_POST['clean'] ) {
 				$this->clean_entries( $gallery_id );
 			}
-			$this->modula_import_result( false, esc_html__( 'No images found in gallery. Skipping gallery...', 'modula-best-grid-gallery' ), false );
+			$this->modula_import_result( false, esc_html__( 'No images found in gallery. Skipping gallery...', 'migrate-away-from-foogallery' ), false );
 		}
 
 		$grid             = 'grid';

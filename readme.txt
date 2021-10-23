@@ -1,6 +1,6 @@
 === Migrate away from FooGallery ===
 Contributors: wpchill, silkalns
-Tags: final tiles migrator, migrate to Modula,
+Tags: foogallery gallery migrator, migrate to Modula, gallery migrator, migrate from foo gallery
 Requires at least: 5.2
 Tested up to: 5.8
 Requires PHP: 5.6

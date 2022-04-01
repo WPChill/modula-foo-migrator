@@ -1,8 +1,8 @@
 {
-	"name": "modula-deeplink",
+	"name": "migrate-away-from-foogallery",
 	"main": "Gruntfile.js",
-	"version": "1.0.0",
-	"author": "Macho Themes",
+	"version": "1.0.1",
+	"author": "WPChill",
 	"license": "GPL v3",
 	"repository": "https://github.com/machothemes/simple-author-box.git",
 	"scripts": {

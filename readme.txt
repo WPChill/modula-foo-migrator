@@ -2,9 +2,9 @@
 Contributors: wpchill, silkalns
 Tags: foogallery gallery migrator, migrate to Modula, gallery migrator, migrate from foo gallery
 Requires at least: 5.2
-Tested up to: 5.8
+Tested up to: 5.9
 Requires PHP: 5.6
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GNU General Public License v3.0 or later
 
 Migrate away from FooGallery is the official migrator from FooGallery to Modula Gallery

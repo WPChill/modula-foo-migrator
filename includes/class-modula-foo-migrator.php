@@ -168,7 +168,7 @@ class Modula_Foo_Migrator {
 
 			if ( 'modula-gallery' == $modula_gallery ) {
 				// Trigger delete function if option is set to delete
-				if ( isset( $_POST['clean'] ) && 'delete' == $_POST['clean'] ) {
+				if ( isset( $_POST['clean'] ) && 'delete' == sanitize_text_field( wp_unslash( $_POST['clean'] ) ) {
 					$this->clean_entries( $gallery_id );
 				}
 				$this->modula_import_result( false, esc_html__( 'Gallery already migrated!', 'migrate-away-from-foogallery' ), false );

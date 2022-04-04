@@ -32,7 +32,7 @@ class Modula_Foo_Migrator {
 
 				if ( is_admin() ) {
 					add_action( 'admin_notices', array( $modula_checker, 'display_modula_notice' ) );
-					add_action('init', array( $this, 'set_locale', 15 ) );
+					add_action( 'plugins_loaded', array( $this, 'set_locale', 15 ) );
 				}
 
 			} else {

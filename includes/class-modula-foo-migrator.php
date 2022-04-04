@@ -490,7 +490,7 @@ class Modula_Foo_Migrator {
 	 * @return void
 	 */
 	public function set_locale() {
-		load_plugin_textdomain( 'modula-foo-migrator', false, dirname( MODULA_FILE ) . '/languages'  );
+		load_plugin_textdomain( 'modula-foo-migrator', false, dirname( MODULA_FOO_MIGRATOR_FILE ) . '/languages' );
 	}
 
 }

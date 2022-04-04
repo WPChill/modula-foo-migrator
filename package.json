@@ -1,10 +1,10 @@
 {
-	"name": "migrate-away-from-foogallery",
+	"name": "modula-foo-migrator",
 	"main": "Gruntfile.js",
 	"version": "1.0.1",
 	"author": "WPChill",
 	"license": "GPL v3",
-	"repository": "https://github.com/machothemes/simple-author-box.git",
+	"repository": "https://github.com/WPChill/migrate-away-from-foogallery.git",
 	"scripts": {
 		"build": "webpack",
 		"watch": "webpack --watch",

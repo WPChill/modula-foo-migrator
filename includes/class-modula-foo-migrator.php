@@ -32,6 +32,7 @@ class Modula_Foo_Migrator {
 
 				if ( is_admin() ) {
 					add_action( 'admin_notices', array( $modula_checker, 'display_modula_notice' ) );
+					add_action('init', array( $this, 'set_locale', 15 ) );
 				}
 
 			} else {
@@ -152,7 +153,7 @@ class Modula_Foo_Migrator {
 			check_ajax_referer( 'modula-importer', 'nonce' );
 
 			if ( ! isset( $_POST['id'] ) ) {
-				$this->modula_import_result( false, esc_html__( 'No gallery was selected', 'migrate-away-from-foogallery' ), false );
+				$this->modula_import_result( false, esc_html__( 'No gallery was selected', 'modula-foo-migrator' ), false );
 			}
 
 			$gallery_id = absint( $_POST['id'] );
@@ -168,10 +169,10 @@ class Modula_Foo_Migrator {
 
 			if ( 'modula-gallery' == $modula_gallery ) {
 				// Trigger delete function if option is set to delete
-				if ( isset( $_POST['clean'] ) && 'delete' == sanitize_text_field( wp_unslash( $_POST['clean'] ) ) {
+				if ( isset( $_POST['clean'] ) && 'delete' == sanitize_text_field( wp_unslash( $_POST['clean'] ) ) ) {
 					$this->clean_entries( $gallery_id );
 				}
-				$this->modula_import_result( false, esc_html__( 'Gallery already migrated!', 'migrate-away-from-foogallery' ), false );
+				$this->modula_import_result( false, esc_html__( 'Gallery already migrated!', 'modula-foo-migrator' ), false );
 			}
 		}
 
@@ -221,7 +222,7 @@ class Modula_Foo_Migrator {
 			if ( isset( $_POST['clean'] ) && 'delete' == $_POST['clean'] ) {
 				$this->clean_entries( $gallery_id );
 			}
-			$this->modula_import_result( false, esc_html__( 'No images found in gallery. Skipping gallery...', 'migrate-away-from-foogallery' ), false );
+			$this->modula_import_result( false, esc_html__( 'No images found in gallery. Skipping gallery...', 'modula-foo-migrator' ), false );
 		}
 
 		$grid             = 'grid';
@@ -481,6 +482,15 @@ class Modula_Foo_Migrator {
 
 		return get_post_meta( $data, 'foogallery_attachments', true );
 
+	}
+
+	/**
+	 * Set localization for the plugin
+	 *
+	 * @return void
+	 */
+	public function set_locale() {
+		load_plugin_textdomain( 'modula-foo-migrator', false, dirname( MODULA_FILE ) . '/languages'  );
 	}
 
 }

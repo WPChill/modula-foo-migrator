@@ -98,4 +98,4 @@ The simplest way to install is to click on \'Plugins\' then \'Add\' and type \'M
 
 == Changelog ==
 
-See <a href="https://github.com/WPChill/https://github.com/WPChill/migrate-away-from-foogallery/blob/main/changelog.txt" target="_blank">changelog</a>
+See <a href="https://github.com/WPChill/migrate-away-from-foogallery/blob/main/changelog.txt" target="_blank">changelog</a>

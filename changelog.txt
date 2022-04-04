@@ -1,4 +1,4 @@
-= 1.0.0 =
+= 1.0.1 =
 Fixed: Sanitizations ( https://github.com/WPChill/migrate-away-from-foogallery/issues/1 )
 
 = 1.0.0 =

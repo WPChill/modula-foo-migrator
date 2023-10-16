@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Modula Foo Migrator
+ * Plugin Name: Modula - Foo Migrator
  * Plugin URI: https://wp-modula.com/
  * Description: Submodule that helps migrate galleries from FooGallery to Modula Gallery
  * Author: WPChill

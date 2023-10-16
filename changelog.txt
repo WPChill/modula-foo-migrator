@@ -1,3 +1,6 @@
+= 1.0.2 - TBD =
+Changed: Updated plugin's name.
+
 = 1.0.1 =
 Fixed: Sanitizations ( https://github.com/WPChill/migrate-away-from-foogallery/issues/1 )
 Fixed: Translations

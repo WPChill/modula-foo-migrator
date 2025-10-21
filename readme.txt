@@ -2,7 +2,7 @@
 Contributors: wpchill, silkalns
 Tags: foogallery gallery migrator, migrate to Modula, gallery migrator, migrate from foo gallery
 Requires at least: 5.2
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 5.6
 Stable tag: 1.0.1
 License: GNU General Public License v3.0 or later
@@ -95,6 +95,11 @@ The simplest way to install is to click on \'Plugins\' then \'Add\' and type \'M
 3. Copy the \"modula-foo-migrator\" folder into the /wp-content/plugins directory of your WordPress installation.
 4. Login to your website and go to the Plugins section of your admin panel.
 5. Look for \"Modula Foo Migrator\" and click Activate.
+
+== Frequently Asked Questions ==
+= Where do I report security bugs found in this plugin? =
+
+Please report security bugs found in the source code of the Migrate away from FooGallery plugin through the [Patchstack Vulnerability Disclosure  Program](https://patchstack.com/database/vdp/26c8f3c1-9a0e-4777-bdb8-599614a55000). The Patchstack team will assist you with verification, CVE assignment, and notify the developers of this plugin."
 
 == Changelog ==
 
